@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Learn Alwayss-Test</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+background: linear-gradient(90deg, #FF5F6D 0%, #FFC371 100%);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+ 
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.quiz-container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+  width: 600px;
+  overflow: hidden;
+}
+
+.quiz-header {
+  padding: 4rem;
+}
+
+h2 {
+  padding: 1rem;
+  text-align: center;
+  margin: 0;
+}
+
+
+@keyframes myAnimation {
+  100% {
+    border-top-left-radius: 60px;
+  } 
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+ul li label {
+  cursor: pointer;
+}
+
+button {
+background-image: linear-gradient( 113.3deg,  rgba(217,9,27,1) 6.9%, rgba(22,68,150,1) 75% );
+  color: #fff;
+  border: none;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-family: inherit;
+  padding: 1.3rem;
+}
+
+button:hover {
+  background-color: #732d91;
+}
+
+button:focus {
+  outline: none;
+  background-color: #5e3370;
+}
+
+    </style>
+  </head>
+  <body>
+    <!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+window.fbAsyncInit = function() {
+  FB.init({
+    xfbml            : true,
+    version          : 'v10.0'
+  });
+};
+
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your Chat Plugin code -->
+<div class="fb-customerchat"
+  attribution="install_email"
+  page_id="108438741037882"
+  theme_color="#6699cc">
+</div>
+
+
+  
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Learn Alwayss Quize app</title>
+      </head>
+      <body>
+        <div class="quiz-container" id="quiz">
+          <div class="quiz-header">
+           
+            <h2 id="question">Question text</h2>
+            <ul>
+              <li>
+                <input type="radio" name="answer" id="a" class="answer">
+                <label for="a" id="a_text">Question</label>
+              </li>
+    
+              <li>
+                <input type="radio" name="answer" id="b" class="answer">
+                <label for="b" id="b_text">Question</label>
+              </li>
+    
+              <li>
+                <input type="radio" name="answer" id="c" class="answer">
+                <label for="c" id="c_text">Question</label>
+              </li>
+    
+              <li>
+                <input type="radio" name="answer" id="d" class="answer">
+                <label for="d" id="d_text">Question</label>
+              </li>
+            </ul>
+          </div>
+          <button id="submit">Submit</button>
+          
+        </div>
+        <script src="script.js"></script>
+      </body>
+    </html>
+    
+
+
+
+
+
+
+
+<script>
+    const quizData = [
+    {
+        
+        question: "HTML stands for -",
+        a: "HighText Machine Language",
+        b: "HyperText and links Markup Language",
+        c: "HyperText Markup Language",
+        d: "None of these",
+        correct: "c",
+    },
+    {
+        question: "The correct sequence of HTML tags for starting a webpage is -",
+        a: "Head, Title, HTML, body",
+        b: "HTML, Body, Title, Head",
+        c: "HTML, Head, Title, Body",
+        d: "HTML, Head, body, title",
+        correct: "c",
+    },
+    {
+        question: "Which of the following element is responsible for making the text bold in HTML?",
+        a: "<pre>",
+        b: "<a>",
+        c: "<b>",
+        d: "<br>",
+        correct: "c",
+    },
+    {
+        question: "Which of the following tag is used to insert a line-break in HTML?",
+        a: "<br>",
+        b: "<a>",
+        c: "<pre>",
+        d: "<b>",
+        correct: "a",
+    },
+     {
+        question: "How to create an unordered list (a list with the list items in bullets) in HTML?",
+        a: "<ul>",
+        b: "<ol>",
+        c: "<li>",
+        d: "<i>",
+        correct: "a",
+    },
+     {
+        question: "How to create an ordered list (a list with the list items in numbers) in HTML",
+        a: "<ul>",
+        b: "<ol>",
+        c: "<li>",
+        d: "<i>",
+        correct: "b",
+    },
+     {
+        question: "The tags in HTML are -",
+        a: "case-sensitive",
+        b: "in upper case",
+        c: "not case sensitive",
+        d: "in lowercase",
+        correct: "c",
+    },
+     {
+        question: " Which of the following element is responsible for making the text italic in HTML?",
+        a: "<i>",
+        b: "<italic>",
+        c: "<it>",
+        d: "<pre>",
+        correct: "b",
+    },
+     {
+        question: " CSS stands for -",
+        a: "Cascade style sheets",
+        b: "Color and style sheets",
+        c: "None of the above",
+        d: "Cascading style sheets",
+        correct: "d",
+    },
+     {
+        question: "The property in CSS used to change the background color of an element is -",
+        a: "bgcolor",
+        b: "color",
+        c: "background-color",
+        d: "All of the above",
+        correct: "c",
+    },
+      {
+        question: "The property in CSS used to change the text color of an element is -",
+        a: "bgcolor",
+        b: "color",
+        c: "background-color",
+        d: "All of the above",
+        correct: "b",
+    },
+
+  {
+        question: "The CSS property used to control the element's font-size is -",
+        a: "text-style",
+        b: "text-size",
+        c: "font-size",
+        d: "None of the above",
+        correct: "c",
+    },
+
+  {
+        question: "The HTML attribute used to define the inline styles is -",
+        a: "style",
+        b: "styles",
+        c: "class",
+        d: "All of the above",
+        correct: "a",
+    },
+
+  {
+        question: "The HTML attribute used to define the internal stylesheet is -",
+        a: "<style>",
+        b: "style",
+        c: "<link>",
+        d: "<script>",
+        correct: "a",
+    },
+
+  {
+        question: "Which of the following CSS property is used to set the background image of an element?",
+        a: "background-attachment",
+        b: "background-image",
+        c: "background-color",
+        d: "None of the above",
+        correct: "b",
+    },
+
+
+];
+
+const quiz = document.getElementById('quiz')
+const answerEls = document.querySelectorAll('.answer')
+const questionEl = document.getElementById('question')
+const a_text = document.getElementById('a_text')
+const b_text = document.getElementById('b_text')
+const c_text = document.getElementById('c_text')
+const d_text = document.getElementById('d_text')
+const submitBtn = document.getElementById('submit')
+
+let currentQuiz = 0
+let score = 0
+
+loadQuiz()
+
+function loadQuiz() {
+    deselectAnswers()
+
+    const currentQuizData = quizData[currentQuiz]
+
+    questionEl.innerText = currentQuizData.question
+    a_text.innerText = currentQuizData.a
+    b_text.innerText = currentQuizData.b
+    c_text.innerText = currentQuizData.c
+    d_text.innerText = currentQuizData.d
+}
+
+function deselectAnswers() {
+    answerEls.forEach(answerEl => answerEl.checked = false)
+}
+
+function getSelected() {
+    let answer
+
+    answerEls.forEach(answerEl => {
+        if(answerEl.checked) {
+            answer = answerEl.id
+        }
+    })
+
+    return answer
+}
+
+submitBtn.addEventListener('click', () => {
+    const answer = getSelected()
+    
+    if(answer) {
+        if(answer === quizData[currentQuiz].correct) {
+            score++
+        }
+
+        currentQuiz++
+
+        if(currentQuiz < quizData.length) {
+            loadQuiz()
+        } else {
+            quiz.innerHTML = `
+                <h2>You answered ${score}/${quizData.length} questions correctly</h2>
+
+                <button onclick="location.reload()">Reload</button> <br>
+                <button onclick="location.href = 'test.html';" id="myButton" class="float-left submit-button" >Get Certificate</button>
+
+
+            `
+        }
+    }
+})
+</script>
+
+
+    <!-- Typed js -->
+    <script type="text/javascript" src="type.js"></script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  </body>
+</html>
